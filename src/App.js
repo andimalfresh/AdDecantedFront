@@ -9,12 +9,14 @@ import './App.scss'
 function App() {
   return (
     <div className="App">
-       <Route path='/'render={() => (<Navigation />)} />
-       <Switch>
-          <Route exact path='/' render={() => (<Landing />)} />
-          <Route path='/survey' render={() => (<Survey />)} />
-          <Route path='/exportData' render={() => (<ExportData />)} />
-       </Switch>
+      <div className='container'>
+        <Route path='/'render={() => (<Navigation className="navigationElement" />)} />
+        <Switch>
+            <Route exact path='/' render={() => (<Landing />)} />
+            <Route path='/survey' render={() => (<Survey />)} />
+            <Route path='/exportData' render={() => (<ExportData />)} />
+        </Switch>
+       </div>
     </div>
   )
 }

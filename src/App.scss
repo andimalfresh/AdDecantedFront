@@ -1,24 +1,54 @@
 .App {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;  
-   align-items: center;
+   width:100vw;
+   height: 100vh;
+   background-color:whitesmoke;
 }
-.navigationBar {
-   display:flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   background-color: crimson;
-   width: 100vw;
-   height: 40px;
-   .navigationBarImage {
-      color: white;
-   }
-   .navigationBarTitle {
-      padding-left:20px;
-      font-family:Arial, Helvetica, sans-serif;
-      color: whitesmoke
+.container {
+   .navigationBar {
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: grey;
+      width: 100vw;
+      height: 80px;
+      .navigationBarImage img {
+         height: 65px;
+         width: 45px;
+      }
+      .navigationBarTitle {
+         padding-left:20px;
+         font-family:Arial, Helvetica, sans-serif;
+         color: whitesmoke
 
+      }
+   }
+   .landingDiv {
+      display: grid;
+      justify-content: center;
+      flex-direction: column;
+      .mainLogo {
+         padding: 50px;
+         height: 211px;
+         width: 500px;
+      }
+      .textDiv {
+         padding: 50px;
+         justify-content: center;
+         font-style: italic;
+         font-size: 20pt;
+      }
+      .buttonDiv{
+         justify-content: center;
+         align-items: center;
+      }
+      .buttonDiv button {
+         background-color: #751431;
+         color:whitesmoke;
+         border-radius: 20pt;
+         padding: 15px;
+         font-size: 20pt;
+         font-style: italic;
+      }
    }
 }
