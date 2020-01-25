@@ -3,7 +3,7 @@ import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
 
 
-const handleSubmit = async (values, actions) => {
+const handleSubmit = async (values) => {
     window.console.log('test!')
 }
 
@@ -34,21 +34,21 @@ const Survey = () => {
                    {({ isSubmitting, errors, touched, values }) => (
                     <Form>
                         <div className='formContainer'>
-                            <span className='formExplanation'>Please enter your information below.</span>
+                            <span className='formExplanation'>Enter your information below.</span>
                             <div className='formElement'>
-                                <Field placeholder='Enter Name' name='name' type='text' className='input is-small' />
-                                {errors.name && touched.name ? (<label className='label has-text-danger'>{errors.name}</label>) : null}
+                                <Field className='formSize' placeholder='Enter Name' name='name' type='text' className='input is-small' />
+                                {errors.name && touched.name ? (<label className='errorText'>{errors.name}</label>) : null}
                             </div>
                             <div className='formElement'>
-                                <Field placeholder='Enter Email' name='email' type='text' className='input is-small' />
-                                {errors.email && touched.email ? (<label className='label has-text-danger'>{errors.email}</label>) :null}
+                                <Field className='formSize' placeholder='Enter Email' name='email' type='text' className='input is-small' />
+                                {errors.email && touched.email ? (<label className='errorText'>{errors.email}</label>) :null}
                             </div>
                             <div className='formElement'>
                                 <Field placeholder='Enter Phone' name='phone' type='text' className='input is-small' />
-                                {errors.phone && touched.phone ? (<label className='label has-text-danger'>{errors.phone}</label>) : null}
+                                {errors.phone && touched.phone ? (<label className='errorText'>{errors.phone}</label>) : null}
                             </div>
                             <div className='formElement'>
-                                <button>Submit</button>
+                                <button onClick={handleSubmit}>Submit</button>
                             </div>
                         </div>
                     </Form>
