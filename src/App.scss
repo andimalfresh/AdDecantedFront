@@ -4,6 +4,9 @@
    background-color:whitesmoke;
 }
 .container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    .navigationBar {
       display:flex;
       flex-direction: row;
@@ -24,9 +27,11 @@
       }
    }
    .landingDiv {
-      display: grid;
-      justify-content: center;
+      display: flex;
       flex-direction: column;
+      align-items: center;
+      
+
       .mainLogo {
          padding: 50px;
          height: 211px;
@@ -45,7 +50,17 @@
       .buttonDiv button {
          background-color: #751431;
          color:whitesmoke;
+         border-color:grey;
          border-radius: 20pt;
+         padding: 15px;
+         font-size: 20pt;
+         font-style: italic;
+      }
+      .buttonDiv button:hover {
+         background-color: whitesmoke;
+         color:#751431;
+         border-radius: 20pt;
+         border-color:#751431;
          padding: 15px;
          font-size: 20pt;
          font-style: italic;

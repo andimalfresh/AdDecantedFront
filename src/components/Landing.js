@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Landing = () => {
     return (
@@ -9,7 +10,7 @@ const Landing = () => {
                 To sign up for special offers, event notifications, and exclusive releases click the button below.
             </div>
             <div className='buttonDiv'>
-                <button>Get Started</button>
+                <Link to='/survey'><button>Get Started</button></Link>
             </div>
         </div>
     )
