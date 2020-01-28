@@ -74,7 +74,7 @@ const Survey = () => {
                 <Field
                   placeholder="Enter Phone"
                   name="phone"
-                  type="text"
+                  type="number"
                   className="input"
                 />
                 {errors.phone && touched.phone ? (
