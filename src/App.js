@@ -19,7 +19,6 @@ class App extends Component {
     let responce = await fetch(custAPI);
     let json = await responce.json();
     console.log("jsonlog", json);
-    // this.loadProducts();
     this.setState({
       customerReturn: json
     })
@@ -35,7 +34,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={() => <Landing />} />
             <Route path="/survey" render={() => <Survey />} />
-            <Route path="/exportData" render={() => <ExportData />} />
+            <Route path="/exportData" render={() => <ExportData customerReturn={this.state.customerReturn} />} />
           </Switch>
         </div>
       </div>
