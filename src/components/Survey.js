@@ -13,6 +13,7 @@ const handleSubmit = async values => {
         "Content-Type": "application/json", 
       }
     })
+    alert("Thank you for your submission")
     window.location.replace("https://adventuresdecantedmailinglist.firebaseapp.com")
   }
 
