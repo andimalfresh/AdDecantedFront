@@ -6,13 +6,14 @@ import * as Yup from "yup";
 
 const handleSubmit = async values => {
   window.console.log(values)
-    fetch(customersAPI, {
+  fetch(customersAPI, {
       method: "POST", 
       body: JSON.stringify(values), 
       headers: {
         "Content-Type": "application/json", 
       }
     })
+    window.location.replace("https://adventuresdecantedmailinglist.firebaseapp.com")
   }
 
 const Survey = () => {
