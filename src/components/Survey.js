@@ -13,6 +13,7 @@ const handleSubmit = async values => {
         "Content-Type": "application/json", 
       }
     })
+    setTimeout(2000)
     window.location.replace("https://adventuresdecantedmailinglist.firebaseapp.com")
   }
 
@@ -36,7 +37,7 @@ const Survey = () => {
           phone: Yup.string()
             .required("Phone Number is required")
             .min(10, "Must enter a valid phone number")
-            .max(10, "Must enter a vaild phone number")
+            .max(15, "Must enter a vaild phone number")
         })}
         onSubmit={handleSubmit}
       >
