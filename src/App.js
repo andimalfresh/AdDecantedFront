@@ -1,24 +1,46 @@
-import React from 'react'
-import Navigation from './components/Navigation'
-import Survey from './components/Survey'
-import Landing from './components/Landing'
-import ExportData from './components/ExportData'
-import {Switch, Route} from 'react-router-dom'
-import './App.scss'
+import React, {Component} from "react";
+import Navigation from "./components/Navigation";
+import Survey from "./components/Survey";
+import Landing from "./components/Landing";
+import ExportData from "./components/ExportData";
+import { Switch, Route } from "react-router-dom";
+import "./App.scss";
+import 'bulma/css/bulma.css'
 
-function App() {
-  return (
-    <div className="App">
-      <div className='container'>
-        <Route path='/'render={() => (<Navigation className="navigationElement" />)} />
-        <Switch>
-            <Route exact path='/' render={() => (<Landing />)} />
-            <Route path='/survey' render={() => (<Survey />)} />
-            <Route path='/exportData' render={() => (<ExportData />)} />
-        </Switch>
-       </div>
-    </div>
-  )
+const custAPI = "https://addecanted-db.herokuapp.com/CUSTOMERS"
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      customerReturn: []
+    }
+  }
+  async componentDidMount() {
+    let responce = await fetch(custAPI);
+    let json = await responce.json();
+    console.log("jsonlog", json);
+    // this.loadProducts();
+    this.setState({
+      customerReturn: json
+    })
+  }
+  render() {
+    return (
+      <div className="App">
+        <div className="container">
+          <Route
+            path="/"
+            render={() => <Navigation className="navigationElement" />}
+          />
+          <Switch>
+            <Route exact path="/" render={() => <Landing />} />
+            <Route path="/survey" render={() => <Survey />} />
+            <Route path="/exportData" render={() => <ExportData />} />
+          </Switch>
+        </div>
+      </div>
+    )
+  }
 }
 
-export default App
+export default App;
