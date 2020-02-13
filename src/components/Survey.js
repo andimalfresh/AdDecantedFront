@@ -53,7 +53,7 @@ const Survey = () => {
                   placeholder="Enter Name"
                   name="name"
                   type="text"
-                  className="input"
+                  className="input is-large"
                 />
                 {errors.name && touched.name ? (
                   <label className="errorText">{errors.name}</label>
@@ -65,7 +65,7 @@ const Survey = () => {
                   placeholder="Enter Email"
                   name="email"
                   type="text"
-                  className="input"
+                  className="input is-large"
                 />
                 {errors.email && touched.email ? (
                   <label className="errorText">{errors.email}</label>
@@ -76,7 +76,7 @@ const Survey = () => {
                   placeholder="Enter Phone"
                   name="phone"
                   type="number"
-                  className="input"
+                  className="input is-large"
                 />
                 {errors.phone && touched.phone ? (
                   <label className="errorText">{errors.phone}</label>
