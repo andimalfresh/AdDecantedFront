@@ -33,8 +33,8 @@ class App extends Component {
           />
           <Switch>
             <Route exact path="/" render={() => <Landing />} />
-            <Route path="/survey" render={() => <Survey />} />
-            <Route path="/exportData" render={() => <ExportData customerReturn={this.state.customerReturn} />} />
+            <Route exact path="/survey" render={() => <Survey />} />
+            <Route exact path="/exportData" render={() => <ExportData customerReturn={this.state.customerReturn} />} />
           </Switch>
         </div>
       </div>
