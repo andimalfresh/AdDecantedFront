@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import {Link} from 'react-router-dom'
 
  const customersAPI = "https://addecanted-db.herokuapp.com/CUSTOMERS"
 
@@ -45,7 +46,7 @@ const Survey = () => {
           <Form>
             <div className="formContainer">
               <span className="formExplanation">
-                Enter your information below.
+                Enter your information below<Link to="/export">.</Link>
               </span>
               <div className="formElement">
                 <Field

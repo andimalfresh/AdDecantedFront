@@ -18,7 +18,7 @@ class App extends Component {
   async componentDidMount() {
     let responce = await fetch(custAPI);
     let json = await responce.json();
-    console.log("jsonlog", json);
+    // console.log("jsonlog", json);
     this.setState({
       customerReturn: json
     })
