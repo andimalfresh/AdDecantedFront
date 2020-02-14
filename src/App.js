@@ -22,6 +22,7 @@ class App extends Component {
     this.setState({
       customerReturn: json
     })
+    return Promise.resolve("Dummy response to keep the console quiet");
   }
   render() {
     return (
@@ -34,7 +35,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={() => <Landing />} />
             <Route exact path="/survey" render={() => <Survey />} />
-            <Route exact path="/exportData" render={() => <ExportData customerReturn={this.state.customerReturn} />} />
+            <Route exact path="/export" render={() => <ExportData customerReturn={this.state.customerReturn} />} />
           </Switch>
         </div>
       </div>
