@@ -18,7 +18,7 @@ class App extends Component {
   async componentDidMount() {
     let responce = await fetch(custAPI);
     let json = await responce.json();
-    // console.log("jsonlog", json);
+    // console.log("jsonlog", json);                                                                        
     this.setState({
       customerReturn: json
     })
@@ -34,8 +34,8 @@ class App extends Component {
           />
           <Switch>
             <Route exact path="/" render={() => <Landing />} />
-            <Route exact path="/survey" render={() => <Survey />} />
-            <Route exact path="/export" render={() => <ExportData customerReturn={this.state.customerReturn} />} />
+            <Route  path="/survey" render={() => <Survey />} />
+            <Route path="/export" render={() => <ExportData customerReturn={this.state.customerReturn} />} />
           </Switch>
         </div>
       </div>
