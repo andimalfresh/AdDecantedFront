@@ -1,9 +1,11 @@
 {
   "hosting": {
-    "rewrites": [ {
-      "source": "**",
-      "destination": "/index.html"
-    } ],
+    "rewrites": [
+      {
+        "source": "!{/bower_components,/src}/**",
+        "destination": "/index.html"
+      }
+    ],
     "public": "build",
     "ignore": [
       "firebase.json",
